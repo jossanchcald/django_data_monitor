@@ -7,4 +7,8 @@ def home(request):
     return render(request, 'dashboard/base.html')
 
 def index(request):
-    return render(request, 'dashboard/index.html')
+    data = {
+        'title': "Landing Page' Dashboard",
+    }
+
+    return render(request, 'dashboard/index.html', data)

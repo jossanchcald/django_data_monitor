@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+API_URL = 'https://landing-4f0eb-default-rtdb.firebaseio.com/noticias.json'
 
 # Application definition
 

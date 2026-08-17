@@ -2,12 +2,14 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import requests
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
 def home(request):
     return render(request, 'dashboard/base.html')
 
+@login_required
 def index(request):
 
     response = requests.get(settings.API_URL)  # URL de la API

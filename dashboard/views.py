@@ -16,9 +16,12 @@ def index(request):
     # Número total de respuestas
     total_responses = len(posts)
 
+    listaDatos = list(posts.values())
+
     data = {
         'title': "Landing Page' Dashboard",
         'total_responses': total_responses,
+        'responses': listaDatos[:10],
     }
 
     return render(request, 'dashboard/index.html', data)
